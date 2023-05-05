@@ -1,0 +1,4 @@
+//CREATE HELLO WORLD FUNCTION
+var createHelloWorld = function() {
+        return () => "Hello World";
+};
