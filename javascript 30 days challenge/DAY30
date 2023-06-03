@@ -1,0 +1,15 @@
+//NESTED ARRAY GENERATOR
+var inorderTraversal = function*(arr) {
+     // Helper function to perform inorder traversal recursively
+  function* traverse(node) {
+    if (Array.isArray(node)) {
+      for (let subArray of node) {
+        yield* traverse(subArray);
+      }
+    } else {
+      yield node;
+    }
+  }
+
+  yield* traverse(arr);
+};
